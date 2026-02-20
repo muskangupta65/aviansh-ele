@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avinash Electronics | Home Appliances</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+            <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+                <span class="close-cart">&times;</span>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <p class="empty-cart-msg">Your cart is empty!</p>
+            </div>
+            <div class="cart-footer">
+                <h3>Total: <span id="cartTotal">$0.00</span></h3>
+                <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+        <div class="logo">Avinash <span>Electronics</span></div>
+        
+        <!-- Hamburger Menu Icon -->
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Best Electronics & Appliances</h1>
+            <p>Upgrade your home with the latest technology at unbeatable prices.</p>
+            <a href="#products" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="feature-box">
+            <i class="fas fa-shipping-fast"></i>
+            <h3>Fast Delivery</h3>
+            <p>Free shipping on orders above $50</p>
+        </div>
+        <div class="feature-box">
+            <i class="fas fa-headset"></i>
+            <h3>24/7 Support</h3>
+            <p>Dedicated customer support</p>
+        </div>
+        <div class="feature-box">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Warranty</h3>
+            <p>1 Year warranty on all products</p>
+        </div>
+        <div class="feature-box">
+            <i class="fas fa-undo"></i>
+            <h3>Easy Returns</h3>
+            <p>30-day money-back policy</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <h2 class="section-title">Our Products</h2>
+        
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="badge">New</div>
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=400&q=80" alt="Smart Watch">
+                </div>
+                <div class="product-info">
+                    <h3>Smart Watch</h3>
+                    <p class="category">Wearables</p>
+                    <p class="price">$199.99</p>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1585336261022-680e295ce3fe?auto=format&fit=crop&w=400&q=80" alt="Laptop">
+                </div>
+                <div class="product-info">
+                    <h3>Pro Laptop 15"</h3>
+                    <p class="category">Computers</p>
+                    <p class="price">$999.00</p>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="badge">Sale</div>
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=400&q=80" alt="Smartphone">
+                </div>
+                <div class="product-info">
+                    <h3>Ultra Phone X</h3>
+                    <p class="category">Mobiles</p>
+                    <p class="price"><span class="old-price">$899</span> $799.00</p>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1580982327559-c1202864eb05?auto=format&fit=crop&w=400&q=80" alt="Headphones">
+                </div>
+                <div class="product-info">
+                    <h3>Wireless Headphones</h3>
+                    <p class="category">Audio</p>
+                    <p class="price">$249.50</p>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?auto=format&fit=crop&w=400&q=80" alt="Camera">
+                </div>
+                <div class="product-info">
+                    <h3>DSLR Camera</h3>
+                    <p class="category">Cameras</p>
+                    <p class="price">$550.00</p>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card">
+                <div class="badge">Hot</div>
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1556656793-02774a8c577a?auto=format&fit=crop&w=400&q=80" alt="Gaming Console">
+                </div>
+                <div class="product-info">
+                    <h3>Gaming Console</h3>
+                    <p class="category">Gaming</p>
+                    <p class="price">$399.00</p>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>About Avinash Electronics</h2>
+                <p>Welcome to <strong>Avinash Electronics</strong>, your one-stop destination for the latest electronics and home appliances. We have been serving our customers with quality products and excellent service for over 10 years.</p>
+                <p>Our mission is to provide high-tech products at affordable prices with unmatched customer support.</p>
+                <ul class="about-list">
+                    <li><i class="fas fa-check"></i> Trusted by 10,000+ Customers</li>
+                    <li><i class="fas fa-check"></i> Original Products Only</li>
+                    <li><i class="fas fa-check"></i> Best Price Guarantee</li>
+                </ul>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&w=600&q=80" alt="About Us">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Main Market, City Center</p>
+                <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                <p><i class="fas fa-envelope"></i> info@avinashelectronics.com</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="tel" placeholder="Your Phone">
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h3>Subscribe to our Newsletter</h3>
+            <p>Get latest updates on new products and upcoming sales.</p>
+            <form>
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Avinash Electronics</h3>
+                <p>Your trusted partner for all electronic needs.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#">Home</a>
+                <a href="#products">Products</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <a href="#">Shipping Policy</a>
+                <a href="#">Return Policy</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Avinash Electronics. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
