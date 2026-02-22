@@ -421,7 +421,8 @@ footer {
     }
 
     .nav-links.active {
-        right: 0;
+        left: 0;
+        display: block;
     }
 
     .hero h1 {
