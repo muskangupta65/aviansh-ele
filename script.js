@@ -185,10 +185,10 @@ document.addEventListener('DOMContentLoaded', () => {
             html += `
                 <div class="cart-item">
                     <div class="cart-item-info">
-                        <h4>₹{item.name}</h4>
-                        <p>₹{formatPrice(item.price)}</p>
+                        <h4>${item.name}</h4>
+                        <p>${formatPrice(item.price)}</p>
                     </div>
-                    <button class="remove-item" data-index="₹{index}" aria-label="Remove ₹{item.name}">&times;</button>
+                    <button class="remove-item" data-index="${index}" aria-label="Remove ${item.name}">&times;</button>
                 </div>
             `;
         });
@@ -198,6 +198,38 @@ document.addEventListener('DOMContentLoaded', () => {
             cartTotalElement.textContent = formatPrice(totalPrice);
         }
     }
+    // --- Checkout to WhatsApp (Naya Function) ---
+function handleCheckout() {
+    if (cartItems.length === 0) {
+        showNotification('Your cart is empty!', 'warning');
+        return;
+    }
+
+    // Customer se details puchenge
+    const customerName = prompt("Apna Naam likhein:");
+    const customerAddress = prompt("Apna Address likhein:");
+
+    if (customerName && customerAddress) {
+        let message = `*Naya Order - Avinash Electronics*\n\n`;
+        message += `*Naam:* ${customerName}\n`;
+        message += `*Address:* ${customerAddress}\n\n`;
+        message += `*Items:*\n`;
+
+        cartItems.forEach((item, index) => {
+            message += "${index + 1}. ${item.name} - ${formatPrice(item.price)}\n";
+        });
+
+        message += "\n*Total Amount: ${formatPrice(totalPrice)}*";
+
+        // YAHAN APNA NUMBER DAALEIN (91 ke saath)
+        const myNumber = "916306335657"; 
+        const whatsappUrl = `https://wa.me/${myNumber}?text=${encodeURIComponent(message)}`;
+
+        window.open(whatsappUrl, '_blank');
+    } else {
+        showNotification('Order cancel kar diya gaya', 'error');
+    }
+}
 
     // --- Remove from Cart ---
     document.addEventListener('click', (e) => {
@@ -278,7 +310,7 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const name = contactForm.querySelector('input[type="text"]').value;
-            showNotification(`Thank you, ₹{name}! We have received your message.`, 'success');
+            showNotification(`Thank you, ₹${name}! We have received your message.`, 'success');
             contactForm.reset();
         });
     }
