@@ -1,3 +1,8 @@
+html, body {
+    overflow-x: hidden; /* Isse screen side mein nahi khiskegi */
+    width: 100%;
+    position: relative;
+}
 
 * {
     margin: 0;
@@ -60,6 +65,14 @@ header {
     gap: 100px;
     list-style: none;
     font-size: 10px;
+    position: fixed;
+    right: -100%; /* Menu ko right side screen ke bahar phenk do */
+    top: 0;
+    width: 250px; /* Ya jitni aapko width chahiye */
+    height: 100vh;
+    background: #fff;
+    transition: 0.4s ease; /* Smooth slide ke liye */
+    z-index: 1000;
 }
 
 .nav-links a{
@@ -421,8 +434,8 @@ footer {
     }
 
     .nav-links.active {
-        left: 0;
-        display: block;
+        right: 0;
+       
     }
 
     .hero h1 {
