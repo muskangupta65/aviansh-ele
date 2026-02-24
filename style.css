@@ -111,18 +111,19 @@ header {
 .hero {
     height: 80vh;
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                url(image1.jpg);
+                url(shop.jpeg);
     background-size: cover;
-    background-position: center;
-    display: flex;
+    background-position:center 25%;
+    display:flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: var(--white);
+    
 }
 
 .hero h1 { font-size: 3.5rem; margin-bottom: 15px; }
-.hero p { font-size: 1.3rem; margin-bottom: 25px; }
+.hero p { font-size: 1.8rem; margin-bottom: 25px; }
 
 .btn {
     padding: 12px 30px;
@@ -219,14 +220,120 @@ header {
 .add-btn:hover { background: var(--primary-color); }
 
 /* --- ABOUT --- */
-.about { padding: 4rem 5%; background: var(--white); }
+/* .about { padding: 4rem 5%; background: var(--white); }
 .about-container { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; }
 .about-text, .about-image { flex: 1; min-width: 300px; }
 .about-image img { width: 100%; border-radius: 10px; }
 .about-list { margin-top: 20px; }
 .about-list li { margin: 10px 0; }
-.about-list i { color: var(--primary-color); margin-right: 10px; }
+.about-list i { color: var(--primary-color); margin-right: 10px; } */
 
+/* --- Ultimate About Section --- */
+.about {
+    padding: 100px 10%;
+    background-color: #fbfbfb;
+    overflow: hidden;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+/* Image Side Style */
+.about-image-wrapper {
+    flex: 1;
+    position: relative;
+    min-width: 350px;
+}
+
+.main-img-card {
+    position: relative;
+    width: 85%;
+}
+
+.main-img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: -30px;
+    right: -20px;
+    background: var(--primary-color, #007bff);
+    color: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(0,123,255,0.3);
+    animation: float 3s ease-in-out infinite;
+}
+
+.experience-badge .years { font-size: 2rem; font-weight: 800; display: block; }
+
+
+
+/* Text Side Style */
+.about-text { flex: 1.2; min-width: 350px; }
+
+.subtitle {
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.about-text h2 {
+    font-size: 2.8rem;
+    margin: 15px 0 25px;
+    color: #222;
+    line-height: 1.2;
+}
+
+.about-text h2 span { color: var(--primary-color); }
+
+.about-features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin: 35px 0;
+}
+
+.feature-item { display: flex; align-items: flex-start; gap: 15px; }
+.feature-item i { color: var(--primary-color); font-size: 1.5rem; margin-top: 5px; }
+.feature-item h4 { margin-bottom: 5px; color: #333; }
+.feature-item p { font-size: 0.9rem; color: #777; line-height: 1.4; }
+
+/* Floating Animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Button Modern */
+.btn-modern {
+    display: inline-block;
+    padding: 15px 35px;
+    background: #222;
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.btn-modern:hover { background: var(--primary-color); transform: scale(1.05); }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-container { gap: 50px; }
+    .about-text h2 { font-size: 2.2rem; }
+    .about-features-grid { grid-template-columns: 1fr; }
+}
 /* --- CONTACT SECTION --- */
 .contact {
     padding: 4rem 5%;
